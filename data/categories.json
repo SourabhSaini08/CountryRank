@@ -1,0 +1,137 @@
+[
+  {
+    "id": "gdp-nominal",
+    "name": "GDP (Nominal)",
+    "description": "Total value of goods and services produced, in current US dollars.",
+    "unit": "USD",
+    "source": "International Monetary Fund (IMF)",
+    "source_url": "https://www.imf.org/en/Publications/WEO",
+    "higher_is_better": true
+  },
+  {
+    "id": "gdp-per-capita",
+    "name": "GDP Per Capita",
+    "description": "Average economic output per person, a common measure of living standards.",
+    "unit": "USD per person",
+    "source": "World Bank",
+    "source_url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD",
+    "higher_is_better": true
+  },
+  {
+    "id": "population",
+    "name": "Population",
+    "description": "Total number of residents in the country.",
+    "unit": "people",
+    "source": "United Nations Population Division",
+    "source_url": "https://population.un.org/wpp/",
+    "higher_is_better": true
+  },
+  {
+    "id": "life-expectancy",
+    "name": "Life Expectancy",
+    "description": "Average number of years a newborn is expected to live.",
+    "unit": "years",
+    "source": "World Health Organization (WHO)",
+    "source_url": "https://www.who.int/data/gho",
+    "higher_is_better": true
+  },
+  {
+    "id": "human-development-index",
+    "name": "Human Development Index",
+    "description": "Composite index of life expectancy, education, and income per capita.",
+    "unit": "index (0-1)",
+    "source": "UN Development Programme",
+    "source_url": "https://hdr.undp.org/data-center/human-development-index",
+    "higher_is_better": true
+  },
+  {
+    "id": "passport-index",
+    "name": "Passport Power",
+    "description": "Number of destinations a passport holder can access without a prior visa.",
+    "unit": "visa-free destinations",
+    "source": "Henley Passport Index",
+    "source_url": "https://www.henleyglobal.com/passport-index",
+    "higher_is_better": true
+  },
+  {
+    "id": "global-peace-index",
+    "name": "Global Peace Index",
+    "description": "Measure of the relative peacefulness of a country (lower score is more peaceful).",
+    "unit": "index",
+    "source": "Institute for Economics & Peace",
+    "source_url": "https://www.visionofhumanity.org/maps/",
+    "higher_is_better": false
+  },
+  {
+    "id": "corruption-perceptions",
+    "name": "Corruption Perceptions Index",
+    "description": "Perceived levels of public sector corruption, scored 0 (highly corrupt) to 100 (very clean).",
+    "unit": "index (0-100)",
+    "source": "Transparency International",
+    "source_url": "https://www.transparency.org/en/cpi",
+    "higher_is_better": true
+  },
+  {
+    "id": "happiness",
+    "name": "World Happiness Score",
+    "description": "Self-reported life satisfaction based on Cantril ladder survey data.",
+    "unit": "score (0-10)",
+    "source": "World Happiness Report",
+    "source_url": "https://worldhappiness.report/",
+    "higher_is_better": true
+  },
+  {
+    "id": "internet-users",
+    "name": "Internet Penetration",
+    "description": "Share of the population using the internet.",
+    "unit": "% of population",
+    "source": "International Telecommunication Union (ITU)",
+    "source_url": "https://www.itu.int/itu-d/reports/statistics/",
+    "higher_is_better": true
+  },
+  {
+    "id": "military-expenditure",
+    "name": "Military Expenditure",
+    "description": "Annual government spending on defense, in current US dollars.",
+    "unit": "USD",
+    "source": "Stockholm International Peace Research Institute (SIPRI)",
+    "source_url": "https://www.sipri.org/databases/milex",
+    "higher_is_better": true
+  },
+  {
+    "id": "literacy-rate",
+    "name": "Literacy Rate",
+    "description": "Share of adults (15+) who can read and write.",
+    "unit": "% of adults",
+    "source": "UNESCO Institute for Statistics",
+    "source_url": "http://uis.unesco.org/",
+    "higher_is_better": true
+  },
+  {
+    "id": "unemployment-rate",
+    "name": "Unemployment Rate",
+    "description": "Share of the labor force that is without work but available for and seeking employment.",
+    "unit": "% of labor force",
+    "source": "International Labour Organization (ILO)",
+    "source_url": "https://ilostat.ilo.org/",
+    "higher_is_better": false
+  },
+  {
+    "id": "co2-emissions",
+    "name": "CO2 Emissions",
+    "description": "Total annual carbon dioxide emissions from fossil fuels.",
+    "unit": "million tonnes",
+    "source": "Our World in Data",
+    "source_url": "https://ourworldindata.org/co2-emissions",
+    "higher_is_better": false
+  },
+  {
+    "id": "forest-area",
+    "name": "Forest Area",
+    "description": "Share of total land area covered by forest.",
+    "unit": "% of land area",
+    "source": "Food and Agriculture Organization (FAO)",
+    "source_url": "https://www.fao.org/forest-resources-assessment/",
+    "higher_is_better": true
+  }
+]

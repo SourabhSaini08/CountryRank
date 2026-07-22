@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP513T5CZM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EP513T5CZM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Countries — CountryRank</title>
+  <meta name="description" content="Browse all 195 UN-recognized countries. Click any country to see its rankings across GDP, population, happiness, passport power and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.com/countries/">
+  <meta property="og:title" content="All Countries — CountryRank">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Home</a><span aria-hidden="true"> › </span>
+        <span aria-current="page">Countries</span>
+      </nav>
+
+      <h1 class="section-title">All Countries <span id="total-badge" style="font-size:.85rem;font-weight:600;color:var(--color-text-muted)"></span></h1>
+
+      <div style="margin-bottom:20px">
+        <label for="country-dropdown" class="select-label">Jump directly to a country:</label>
+        <select id="country-dropdown" class="full-select" style="max-width:480px" aria-label="Select a country">
+          <option value="">— Select a Country —</option>
+        </select>
+      </div>
+
+      <div class="list-toolbar">
+        <div class="search-box">
+          <svg class="search-icon" aria-hidden="true" width="16" height="16" fill="none" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+            <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="filter-input" placeholder="Search countries…" aria-label="Search countries" autocomplete="off">
+        </div>
+        <select id="continent-filter" aria-label="Filter by continent"
+          style="padding:10px 14px;border:1px solid var(--color-border);border-radius:999px;background:var(--color-bg);color:var(--color-text);font-family:inherit;font-size:.9rem;cursor:pointer">
+          <option value="">All Continents</option>
+          <option>Africa</option>
+          <option>Asia</option>
+          <option>Europe</option>
+          <option>North America</option>
+          <option>South America</option>
+          <option>Oceania</option>
+        </select>
+        <span class="result-count" id="result-count"></span>
+      </div>
+
+      <div id="countries-container" aria-label="Country list"></div>
+
+    </div>
+  </main>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/search.js"></script>
+  <script>
+    pageInit("countries");
+    Search.initHeader();
+
+    let allCountries = [];
+
+    function cardHTML(c) {
+      return `<a href="../country.html?id=${c.id}" class="item-card" aria-label="${c.name}, ${c.continent}">
+        <img class="flag-md" src="${c.flag}" alt="Flag of ${c.name}" width="42" height="30" loading="lazy">
+        <div><div class="item-name">${c.name}</div><div class="item-meta">${c.continent} · ${c.capital}</div></div>
+      </a>`;
+    }
+
+    function render(countries) {
+      const container = document.getElementById("countries-container");
+      document.getElementById("result-count").textContent = countries.length + " countries";
+      if (!countries.length) {
+        container.innerHTML = `<div class="empty-state">No countries match your search.</div>`;
+        return;
+      }
+      const filterQ = document.getElementById("filter-input").value.trim();
+      const continentQ = document.getElementById("continent-filter").value;
+      if (filterQ || continentQ) {
+        container.innerHTML = `<div class="item-grid">${countries.map(c => cardHTML(c)).join("")}</div>`;
+      } else {
+        const groups = {};
+        countries.forEach(c => {
+          const l = c.name[0].toUpperCase();
+          if (!groups[l]) groups[l] = [];
+          groups[l].push(c);
+        });
+        container.innerHTML = Object.keys(groups).sort().map(l => `
+          <div class="letter-heading" role="heading" aria-level="2">${l}</div>
+          <div class="item-grid">${groups[l].map(c => cardHTML(c)).join("")}</div>
+        `).join("");
+      }
+    }
+
+    function applyFilters() {
+      const q = document.getElementById("filter-input").value.toLowerCase();
+      const continent = document.getElementById("continent-filter").value;
+      let result = allCountries;
+      if (q) result = result.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        c.capital.toLowerCase().includes(q) ||
+        c.iso2.toLowerCase().includes(q));
+      if (continent) result = result.filter(c => c.continent === continent);
+      render(result);
+    }
+
+    loadCountries().then(countries => {
+      allCountries = countries.slice().sort((a,b) => a.name.localeCompare(b.name));
+      document.getElementById("total-badge").textContent = `(${allCountries.length})`;
+      render(allCountries);
+
+      const sel = document.getElementById("country-dropdown");
+      allCountries.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.id; opt.textContent = `${c.name} (${c.iso2})`;
+        sel.appendChild(opt);
+      });
+      sel.addEventListener("change", () => {
+        if (sel.value) location.href = `../country.html?id=${sel.value}`;
+      });
+    });
+
+    document.getElementById("filter-input").addEventListener("input", applyFilters);
+    document.getElementById("continent-filter").addEventListener("change", applyFilters);
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "crime-index",
+    "name": "Crime Index",
+    "description": "Perceived level of crime in a country based on resident surveys.",
+    "unit": "index (0-100)",
+    "source": "Numbeo",
+    "source_url": "https://www.numbeo.com/crime/rankings_by_country.jsp",
+    "higher_is_better": false,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/crime-index.json with 195 country scores. 2) Move this entry to data/categories.json. 3) Done."
+  },
+  {
+    "id": "cost-of-living",
+    "name": "Cost of Living Index",
+    "description": "Relative cost of consumer goods including groceries, restaurants, and utilities.",
+    "unit": "index",
+    "source": "Numbeo",
+    "source_url": "https://www.numbeo.com/cost-of-living/rankings_by_country.jsp",
+    "higher_is_better": false,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/cost-of-living.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "press-freedom",
+    "name": "Press Freedom Index",
+    "description": "Level of freedom available to journalists and media organisations.",
+    "unit": "index (lower = more free)",
+    "source": "Reporters Without Borders (RSF)",
+    "source_url": "https://rsf.org/en/index",
+    "higher_is_better": false,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/press-freedom.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "democracy-index",
+    "name": "Democracy Index",
+    "description": "State of democracy across 167 countries based on electoral process, civil liberties, and political culture.",
+    "unit": "index (0-10)",
+    "source": "Economist Intelligence Unit",
+    "source_url": "https://www.eiu.com/n/campaigns/democracy-index/",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/democracy-index.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "healthcare-index",
+    "name": "Healthcare Index",
+    "description": "Overall quality of the healthcare system including infrastructure, staff, and medicine availability.",
+    "unit": "index (0-100)",
+    "source": "Numbeo",
+    "source_url": "https://www.numbeo.com/health-care/rankings_by_country.jsp",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/healthcare-index.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "air-quality",
+    "name": "Air Quality Index",
+    "description": "Average annual PM2.5 concentration levels measuring air pollution.",
+    "unit": "µg/m³ (lower = cleaner)",
+    "source": "IQAir World Air Quality Report",
+    "source_url": "https://www.iqair.com/world-air-quality-report",
+    "higher_is_better": false,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/air-quality.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "tourism-arrivals",
+    "name": "International Tourism Arrivals",
+    "description": "Number of international tourist arrivals per year.",
+    "unit": "millions of arrivals",
+    "source": "UN World Tourism Organization (UNWTO)",
+    "source_url": "https://www.unwto.org/tourism-statistics",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/tourism-arrivals.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "birth-rate",
+    "name": "Birth Rate",
+    "description": "Number of live births per 1,000 people per year.",
+    "unit": "births per 1,000",
+    "source": "World Bank",
+    "source_url": "https://data.worldbank.org/indicator/SP.DYN.CBRT.IN",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/birth-rate.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "obesity-rate",
+    "name": "Obesity Rate",
+    "description": "Percentage of adults with a BMI of 30 or higher.",
+    "unit": "% of adults",
+    "source": "World Health Organization (WHO)",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+    "higher_is_better": false,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/obesity-rate.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "gender-equality",
+    "name": "Gender Equality Index",
+    "description": "Measures gender parity across economic participation, education, health and political empowerment.",
+    "unit": "index (0-1)",
+    "source": "World Economic Forum — Global Gender Gap Report",
+    "source_url": "https://www.weforum.org/reports/global-gender-gap-report-2024/",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/gender-equality.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "renewable-energy",
+    "name": "Renewable Energy Share",
+    "description": "Share of renewable energy in total electricity generation.",
+    "unit": "% of electricity",
+    "source": "International Energy Agency (IEA)",
+    "source_url": "https://www.iea.org/",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/renewable-energy.json. 2) Move this entry to data/categories.json."
+  },
+  {
+    "id": "education-index",
+    "name": "Education Index",
+    "description": "Composite score based on mean years of schooling and expected years of schooling.",
+    "unit": "index (0-1)",
+    "source": "UN Development Programme (UNDP)",
+    "source_url": "https://hdr.undp.org/",
+    "higher_is_better": true,
+    "data_available": false,
+    "how_to_activate": "1) Create data/rankings/education-index.json. 2) Move this entry to data/categories.json."
+  }
+]

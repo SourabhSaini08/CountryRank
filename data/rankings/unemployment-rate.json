@@ -1,0 +1,982 @@
+{
+  "category": "unemployment-rate",
+  "last_updated": "2025-01-01",
+  "note": "PLACEHOLDER DATA \u2014 replace with verified figures from the source in categories.json before going live.",
+  "rankings": [
+    {
+      "country": "guyana",
+      "score": 2.3,
+      "rank": 1
+    },
+    {
+      "country": "haiti",
+      "score": 2.4,
+      "rank": 2
+    },
+    {
+      "country": "japan",
+      "score": 2.4,
+      "rank": 3
+    },
+    {
+      "country": "austria",
+      "score": 2.5,
+      "rank": 4
+    },
+    {
+      "country": "new-zealand",
+      "score": 2.6,
+      "rank": 5
+    },
+    {
+      "country": "qatar",
+      "score": 2.6,
+      "rank": 6
+    },
+    {
+      "country": "kazakhstan",
+      "score": 2.7,
+      "rank": 7
+    },
+    {
+      "country": "syria",
+      "score": 2.7,
+      "rank": 8
+    },
+    {
+      "country": "rwanda",
+      "score": 3.0,
+      "rank": 9
+    },
+    {
+      "country": "bangladesh",
+      "score": 3.3,
+      "rank": 10
+    },
+    {
+      "country": "el-salvador",
+      "score": 3.8,
+      "rank": 11
+    },
+    {
+      "country": "lebanon",
+      "score": 3.9,
+      "rank": 12
+    },
+    {
+      "country": "tonga",
+      "score": 4.1,
+      "rank": 13
+    },
+    {
+      "country": "mexico",
+      "score": 4.5,
+      "rank": 14
+    },
+    {
+      "country": "saint-vincent-and-the-grenadines",
+      "score": 4.5,
+      "rank": 15
+    },
+    {
+      "country": "denmark",
+      "score": 4.6,
+      "rank": 16
+    },
+    {
+      "country": "estonia",
+      "score": 4.8,
+      "rank": 17
+    },
+    {
+      "country": "guinea",
+      "score": 4.9,
+      "rank": 18
+    },
+    {
+      "country": "grenada",
+      "score": 5.1,
+      "rank": 19
+    },
+    {
+      "country": "kuwait",
+      "score": 5.1,
+      "rank": 20
+    },
+    {
+      "country": "turkmenistan",
+      "score": 5.2,
+      "rank": 21
+    },
+    {
+      "country": "honduras",
+      "score": 5.3,
+      "rank": 22
+    },
+    {
+      "country": "vietnam",
+      "score": 5.6,
+      "rank": 23
+    },
+    {
+      "country": "mozambique",
+      "score": 5.7,
+      "rank": 24
+    },
+    {
+      "country": "albania",
+      "score": 5.8,
+      "rank": 25
+    },
+    {
+      "country": "jordan",
+      "score": 5.8,
+      "rank": 26
+    },
+    {
+      "country": "south-africa",
+      "score": 5.9,
+      "rank": 27
+    },
+    {
+      "country": "mongolia",
+      "score": 6.2,
+      "rank": 28
+    },
+    {
+      "country": "marshall-islands",
+      "score": 6.5,
+      "rank": 29
+    },
+    {
+      "country": "palau",
+      "score": 6.5,
+      "rank": 30
+    },
+    {
+      "country": "sri-lanka",
+      "score": 6.6,
+      "rank": 31
+    },
+    {
+      "country": "serbia",
+      "score": 6.7,
+      "rank": 32
+    },
+    {
+      "country": "paraguay",
+      "score": 6.8,
+      "rank": 33
+    },
+    {
+      "country": "laos",
+      "score": 7.1,
+      "rank": 34
+    },
+    {
+      "country": "canada",
+      "score": 7.2,
+      "rank": 35
+    },
+    {
+      "country": "benin",
+      "score": 7.3,
+      "rank": 36
+    },
+    {
+      "country": "bosnia-and-herzegovina",
+      "score": 7.4,
+      "rank": 37
+    },
+    {
+      "country": "netherlands",
+      "score": 7.5,
+      "rank": 38
+    },
+    {
+      "country": "philippines",
+      "score": 7.6,
+      "rank": 39
+    },
+    {
+      "country": "tunisia",
+      "score": 7.8,
+      "rank": 40
+    },
+    {
+      "country": "liberia",
+      "score": 8.0,
+      "rank": 41
+    },
+    {
+      "country": "iraq",
+      "score": 8.2,
+      "rank": 42
+    },
+    {
+      "country": "mali",
+      "score": 8.2,
+      "rank": 43
+    },
+    {
+      "country": "tanzania",
+      "score": 8.2,
+      "rank": 44
+    },
+    {
+      "country": "peru",
+      "score": 8.3,
+      "rank": 45
+    },
+    {
+      "country": "somalia",
+      "score": 8.3,
+      "rank": 46
+    },
+    {
+      "country": "myanmar",
+      "score": 8.6,
+      "rank": 47
+    },
+    {
+      "country": "pakistan",
+      "score": 8.7,
+      "rank": 48
+    },
+    {
+      "country": "vanuatu",
+      "score": 8.7,
+      "rank": 49
+    },
+    {
+      "country": "indonesia",
+      "score": 8.8,
+      "rank": 50
+    },
+    {
+      "country": "jamaica",
+      "score": 8.8,
+      "rank": 51
+    },
+    {
+      "country": "zambia",
+      "score": 8.9,
+      "rank": 52
+    },
+    {
+      "country": "ireland",
+      "score": 9.1,
+      "rank": 53
+    },
+    {
+      "country": "moldova",
+      "score": 9.5,
+      "rank": 54
+    },
+    {
+      "country": "hungary",
+      "score": 10.1,
+      "rank": 55
+    },
+    {
+      "country": "bhutan",
+      "score": 10.3,
+      "rank": 56
+    },
+    {
+      "country": "belgium",
+      "score": 10.4,
+      "rank": 57
+    },
+    {
+      "country": "morocco",
+      "score": 10.4,
+      "rank": 58
+    },
+    {
+      "country": "togo",
+      "score": 10.4,
+      "rank": 59
+    },
+    {
+      "country": "sierra-leone",
+      "score": 11.2,
+      "rank": 60
+    },
+    {
+      "country": "united-states",
+      "score": 11.2,
+      "rank": 61
+    },
+    {
+      "country": "nigeria",
+      "score": 11.3,
+      "rank": 62
+    },
+    {
+      "country": "eritrea",
+      "score": 11.4,
+      "rank": 63
+    },
+    {
+      "country": "guatemala",
+      "score": 11.4,
+      "rank": 64
+    },
+    {
+      "country": "sweden",
+      "score": 11.4,
+      "rank": 65
+    },
+    {
+      "country": "south-korea",
+      "score": 11.6,
+      "rank": 66
+    },
+    {
+      "country": "timor-leste",
+      "score": 11.8,
+      "rank": 67
+    },
+    {
+      "country": "mauritania",
+      "score": 12.1,
+      "rank": 68
+    },
+    {
+      "country": "bahrain",
+      "score": 12.3,
+      "rank": 69
+    },
+    {
+      "country": "madagascar",
+      "score": 13.0,
+      "rank": 70
+    },
+    {
+      "country": "belize",
+      "score": 13.2,
+      "rank": 71
+    },
+    {
+      "country": "lithuania",
+      "score": 13.3,
+      "rank": 72
+    },
+    {
+      "country": "cameroon",
+      "score": 13.4,
+      "rank": 73
+    },
+    {
+      "country": "germany",
+      "score": 13.6,
+      "rank": 74
+    },
+    {
+      "country": "azerbaijan",
+      "score": 13.8,
+      "rank": 75
+    },
+    {
+      "country": "maldives",
+      "score": 13.8,
+      "rank": 76
+    },
+    {
+      "country": "antigua-and-barbuda",
+      "score": 14.0,
+      "rank": 77
+    },
+    {
+      "country": "brazil",
+      "score": 14.0,
+      "rank": 78
+    },
+    {
+      "country": "bulgaria",
+      "score": 14.0,
+      "rank": 79
+    },
+    {
+      "country": "trinidad-and-tobago",
+      "score": 14.0,
+      "rank": 80
+    },
+    {
+      "country": "botswana",
+      "score": 14.1,
+      "rank": 81
+    },
+    {
+      "country": "bahamas",
+      "score": 14.2,
+      "rank": 82
+    },
+    {
+      "country": "cyprus",
+      "score": 14.3,
+      "rank": 83
+    },
+    {
+      "country": "bolivia",
+      "score": 14.6,
+      "rank": 84
+    },
+    {
+      "country": "luxembourg",
+      "score": 14.7,
+      "rank": 85
+    },
+    {
+      "country": "slovenia",
+      "score": 14.8,
+      "rank": 86
+    },
+    {
+      "country": "chile",
+      "score": 14.9,
+      "rank": 87
+    },
+    {
+      "country": "norway",
+      "score": 14.9,
+      "rank": 88
+    },
+    {
+      "country": "kenya",
+      "score": 15.3,
+      "rank": 89
+    },
+    {
+      "country": "seychelles",
+      "score": 15.5,
+      "rank": 90
+    },
+    {
+      "country": "costa-rica",
+      "score": 15.6,
+      "rank": 91
+    },
+    {
+      "country": "croatia",
+      "score": 15.7,
+      "rank": 92
+    },
+    {
+      "country": "united-arab-emirates",
+      "score": 15.7,
+      "rank": 93
+    },
+    {
+      "country": "greece",
+      "score": 15.8,
+      "rank": 94
+    },
+    {
+      "country": "central-african-republic",
+      "score": 16.3,
+      "rank": 95
+    },
+    {
+      "country": "india",
+      "score": 16.3,
+      "rank": 96
+    },
+    {
+      "country": "north-macedonia",
+      "score": 16.3,
+      "rank": 97
+    },
+    {
+      "country": "uganda",
+      "score": 16.4,
+      "rank": 98
+    },
+    {
+      "country": "ghana",
+      "score": 16.5,
+      "rank": 99
+    },
+    {
+      "country": "andorra",
+      "score": 16.6,
+      "rank": 100
+    },
+    {
+      "country": "argentina",
+      "score": 16.7,
+      "rank": 101
+    },
+    {
+      "country": "singapore",
+      "score": 16.8,
+      "rank": 102
+    },
+    {
+      "country": "burundi",
+      "score": 17.0,
+      "rank": 103
+    },
+    {
+      "country": "kyrgyzstan",
+      "score": 17.2,
+      "rank": 104
+    },
+    {
+      "country": "micronesia",
+      "score": 17.2,
+      "rank": 105
+    },
+    {
+      "country": "brunei",
+      "score": 17.3,
+      "rank": 106
+    },
+    {
+      "country": "angola",
+      "score": 17.4,
+      "rank": 107
+    },
+    {
+      "country": "russia",
+      "score": 17.4,
+      "rank": 108
+    },
+    {
+      "country": "ecuador",
+      "score": 17.5,
+      "rank": 109
+    },
+    {
+      "country": "france",
+      "score": 17.7,
+      "rank": 110
+    },
+    {
+      "country": "montenegro",
+      "score": 17.9,
+      "rank": 111
+    },
+    {
+      "country": "niger",
+      "score": 18.0,
+      "rank": 112
+    },
+    {
+      "country": "malawi",
+      "score": 18.1,
+      "rank": 113
+    },
+    {
+      "country": "thailand",
+      "score": 18.4,
+      "rank": 114
+    },
+    {
+      "country": "sao-tome-and-principe",
+      "score": 18.5,
+      "rank": 115
+    },
+    {
+      "country": "venezuela",
+      "score": 18.6,
+      "rank": 116
+    },
+    {
+      "country": "saudi-arabia",
+      "score": 18.7,
+      "rank": 117
+    },
+    {
+      "country": "chad",
+      "score": 19.0,
+      "rank": 118
+    },
+    {
+      "country": "italy",
+      "score": 19.0,
+      "rank": 119
+    },
+    {
+      "country": "cambodia",
+      "score": 19.1,
+      "rank": 120
+    },
+    {
+      "country": "uzbekistan",
+      "score": 19.2,
+      "rank": 121
+    },
+    {
+      "country": "nauru",
+      "score": 19.3,
+      "rank": 122
+    },
+    {
+      "country": "senegal",
+      "score": 19.4,
+      "rank": 123
+    },
+    {
+      "country": "egypt",
+      "score": 19.5,
+      "rank": 124
+    },
+    {
+      "country": "south-sudan",
+      "score": 19.5,
+      "rank": 125
+    },
+    {
+      "country": "yemen",
+      "score": 19.5,
+      "rank": 126
+    },
+    {
+      "country": "algeria",
+      "score": 19.6,
+      "rank": 127
+    },
+    {
+      "country": "djibouti",
+      "score": 19.6,
+      "rank": 128
+    },
+    {
+      "country": "iceland",
+      "score": 19.7,
+      "rank": 129
+    },
+    {
+      "country": "saint-lucia",
+      "score": 19.8,
+      "rank": 130
+    },
+    {
+      "country": "australia",
+      "score": 20.0,
+      "rank": 131
+    },
+    {
+      "country": "georgia",
+      "score": 20.2,
+      "rank": 132
+    },
+    {
+      "country": "fiji",
+      "score": 20.4,
+      "rank": 133
+    },
+    {
+      "country": "iran",
+      "score": 21.0,
+      "rank": 134
+    },
+    {
+      "country": "palestine",
+      "score": 21.0,
+      "rank": 135
+    },
+    {
+      "country": "united-kingdom",
+      "score": 21.0,
+      "rank": 136
+    },
+    {
+      "country": "gabon",
+      "score": 21.2,
+      "rank": 137
+    },
+    {
+      "country": "poland",
+      "score": 21.4,
+      "rank": 138
+    },
+    {
+      "country": "tajikistan",
+      "score": 21.4,
+      "rank": 139
+    },
+    {
+      "country": "eswatini",
+      "score": 21.7,
+      "rank": 140
+    },
+    {
+      "country": "papua-new-guinea",
+      "score": 22.2,
+      "rank": 141
+    },
+    {
+      "country": "israel",
+      "score": 22.5,
+      "rank": 142
+    },
+    {
+      "country": "barbados",
+      "score": 22.6,
+      "rank": 143
+    },
+    {
+      "country": "solomon-islands",
+      "score": 22.7,
+      "rank": 144
+    },
+    {
+      "country": "burkina-faso",
+      "score": 22.8,
+      "rank": 145
+    },
+    {
+      "country": "slovakia",
+      "score": 22.8,
+      "rank": 146
+    },
+    {
+      "country": "spain",
+      "score": 22.8,
+      "rank": 147
+    },
+    {
+      "country": "kiribati",
+      "score": 22.9,
+      "rank": 148
+    },
+    {
+      "country": "sudan",
+      "score": 23.0,
+      "rank": 149
+    },
+    {
+      "country": "colombia",
+      "score": 23.2,
+      "rank": 150
+    },
+    {
+      "country": "cuba",
+      "score": 23.7,
+      "rank": 151
+    },
+    {
+      "country": "samoa",
+      "score": 23.9,
+      "rank": 152
+    },
+    {
+      "country": "latvia",
+      "score": 24.1,
+      "rank": 153
+    },
+    {
+      "country": "saint-kitts-and-nevis",
+      "score": 24.1,
+      "rank": 154
+    },
+    {
+      "country": "mauritius",
+      "score": 24.2,
+      "rank": 155
+    },
+    {
+      "country": "uruguay",
+      "score": 24.3,
+      "rank": 156
+    },
+    {
+      "country": "lesotho",
+      "score": 24.5,
+      "rank": 157
+    },
+    {
+      "country": "malta",
+      "score": 24.5,
+      "rank": 158
+    },
+    {
+      "country": "armenia",
+      "score": 24.6,
+      "rank": 159
+    },
+    {
+      "country": "czech-republic",
+      "score": 24.6,
+      "rank": 160
+    },
+    {
+      "country": "libya",
+      "score": 24.6,
+      "rank": 161
+    },
+    {
+      "country": "finland",
+      "score": 24.7,
+      "rank": 162
+    },
+    {
+      "country": "nicaragua",
+      "score": 24.7,
+      "rank": 163
+    },
+    {
+      "country": "ethiopia",
+      "score": 25.9,
+      "rank": 164
+    },
+    {
+      "country": "dominican-republic",
+      "score": 26.1,
+      "rank": 165
+    },
+    {
+      "country": "turkey",
+      "score": 26.1,
+      "rank": 166
+    },
+    {
+      "country": "north-korea",
+      "score": 26.2,
+      "rank": 167
+    },
+    {
+      "country": "afghanistan",
+      "score": 26.3,
+      "rank": 168
+    },
+    {
+      "country": "monaco",
+      "score": 26.4,
+      "rank": 169
+    },
+    {
+      "country": "zimbabwe",
+      "score": 26.4,
+      "rank": 170
+    },
+    {
+      "country": "republic-of-the-congo",
+      "score": 26.8,
+      "rank": 171
+    },
+    {
+      "country": "dominica",
+      "score": 27.0,
+      "rank": 172
+    },
+    {
+      "country": "gambia",
+      "score": 27.0,
+      "rank": 173
+    },
+    {
+      "country": "ukraine",
+      "score": 27.0,
+      "rank": 174
+    },
+    {
+      "country": "china",
+      "score": 27.1,
+      "rank": 175
+    },
+    {
+      "country": "democratic-republic-of-the-congo",
+      "score": 27.2,
+      "rank": 176
+    },
+    {
+      "country": "suriname",
+      "score": 27.2,
+      "rank": 177
+    },
+    {
+      "country": "cabo-verde",
+      "score": 27.8,
+      "rank": 178
+    },
+    {
+      "country": "tuvalu",
+      "score": 27.8,
+      "rank": 179
+    },
+    {
+      "country": "san-marino",
+      "score": 27.9,
+      "rank": 180
+    },
+    {
+      "country": "oman",
+      "score": 28.0,
+      "rank": 181
+    },
+    {
+      "country": "portugal",
+      "score": 28.0,
+      "rank": 182
+    },
+    {
+      "country": "switzerland",
+      "score": 28.0,
+      "rank": 183
+    },
+    {
+      "country": "namibia",
+      "score": 28.2,
+      "rank": 184
+    },
+    {
+      "country": "taiwan",
+      "score": 28.4,
+      "rank": 185
+    },
+    {
+      "country": "comoros",
+      "score": 28.5,
+      "rank": 186
+    },
+    {
+      "country": "liechtenstein",
+      "score": 28.5,
+      "rank": 187
+    },
+    {
+      "country": "malaysia",
+      "score": 28.5,
+      "rank": 188
+    },
+    {
+      "country": "romania",
+      "score": 28.7,
+      "rank": 189
+    },
+    {
+      "country": "equatorial-guinea",
+      "score": 29.3,
+      "rank": 190
+    },
+    {
+      "country": "nepal",
+      "score": 29.3,
+      "rank": 191
+    },
+    {
+      "country": "guinea-bissau",
+      "score": 29.7,
+      "rank": 192
+    },
+    {
+      "country": "panama",
+      "score": 29.7,
+      "rank": 193
+    },
+    {
+      "country": "belarus",
+      "score": 29.9,
+      "rank": 194
+    },
+    {
+      "country": "holy-see",
+      "score": 30.0,
+      "rank": 195
+    }
+  ]
+}
