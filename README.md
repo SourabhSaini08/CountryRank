@@ -2,7 +2,7 @@
 
 > Compare all 195 countries across dozens of global ranking categories.
 
-Live demo: **[yourdomain.com](https://yourdomain.com)**
+Live demo: **[mycountryrank.com](https://mycountryrank.com)**
 
 ---
 
@@ -58,7 +58,7 @@ CountryRank/
 3. Set source to `main` branch, `/ (root)`
 4. Your site is live at `https://yourusername.github.io/CountryRank/`
 
-> **Note:** Update `BASE` URL logic in `js/app.js` and replace `yourdomain.com` in
+> **Note:** Update `BASE` URL logic in `js/app.js` and replace `mycountryrank.com` in
 > `robots.txt`, `sitemap.xml`, and HTML meta tags with your real domain.
 
 ---
