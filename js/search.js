@@ -1,15 +1,31 @@
 /* =========================================================
    search.js — Live search
+   FIXED: each attach() call now creates an ISOLATED instance
+   with its own private state. Previously all search boxes
+   shared one set of module variables, so the last box to
+   initialize silently broke every other box on the page
+   (this is exactly what caused the homepage Country/Category
+   search cards to read/write into the wrong dropdown).
+
    Supports scoped modes:
      "all"        -> shows both Countries and Categories (header, 404 page)
      "countries"  -> shows Countries only (home page "Search Countries" card)
      "categories" -> shows Categories only (home page "Search Categories" card)
    ========================================================= */
 const Search = (() => {
-  let _countries = [], _categories = [], _activeIdx = -1, _items = [], _input, _dropdown, _mode = "all";
+  /* Shared read-only data cache — safe to share since it's the same
+     source data for every search box. A single in-flight promise is
+     reused so concurrent attach() calls don't trigger duplicate fetches. */
+  let _countries = [], _categories = [], _loadPromise = null;
 
-  async function load() {
-    [_countries, _categories] = await Promise.all([loadCountries(), loadCategories()]);
+  async function ensureLoaded() {
+    if (_countries.length) return;
+    if (!_loadPromise) {
+      _loadPromise = Promise.all([loadCountries(), loadCategories()]).then(([c, cat]) => {
+        _countries = c; _categories = cat;
+      });
+    }
+    await _loadPromise;
   }
 
   function score(text, query) {
@@ -22,7 +38,7 @@ const Search = (() => {
 
   function buildSuggestions(query, mode) {
     const q = query.trim();
-    if (!q) return "";
+    if (!q) return { html: "", items: [] };
 
     const showCountries  = mode === "all" || mode === "countries";
     const showCategories = mode === "all" || mode === "categories";
@@ -38,11 +54,11 @@ const Search = (() => {
       : [];
 
     if (!matchedCountries.length && !matchedCats.length) {
-      return `<div class="suggestion-empty">No results for "<strong>${q}</strong>"</div>`;
+      return { html: `<div class="suggestion-empty">No results for "<strong>${q}</strong>"</div>`, items: [] };
     }
 
     let html = "";
-    _items = [];
+    const items = [];
 
     if (matchedCountries.length) {
       if (mode === "all") html += `<div class="suggestion-group-label" aria-hidden="true">Countries</div>`;
@@ -54,7 +70,7 @@ const Search = (() => {
             <span>${c.name}</span>
             <small style="margin-left:auto;color:var(--color-text-muted)">${c.continent}</small>
           </div>`;
-        _items.push(url);
+        items.push(url);
       });
     }
     if (matchedCats.length) {
@@ -66,46 +82,54 @@ const Search = (() => {
             <span style="font-size:1.1em">📊</span>
             <span>${c.name}</span>
           </div>`;
-        _items.push(url);
+        items.push(url);
       });
     }
-    return html;
+    return { html, items };
   }
 
-  function setActive(idx) {
-    const all = _dropdown.querySelectorAll(".suggestion-item");
-    all.forEach((el, i) => el.classList.toggle("active", i === idx));
-    _activeIdx = idx;
-  }
   function go(url) { location.href = url; }
 
+  /* Each call creates a fully independent instance — its own
+     input, dropdown, mode, active index, and matched items,
+     all captured in this function's own closure. Nothing here
+     is shared with any other search box on the page. */
   function attach(inputEl, dropdownEl, mode = "all") {
-    _input = inputEl; _dropdown = dropdownEl; _activeIdx = -1; _mode = mode;
+    let activeIdx = -1;
+    let items = [];
 
-    _input.addEventListener("input", async () => {
-      const q = _input.value.trim();
-      if (!q) { _dropdown.classList.remove("open"); return; }
-      if (!_countries.length) await load();
-      _dropdown.innerHTML = buildSuggestions(q, _mode);
-      _activeIdx = -1;
-      _dropdown.classList.add("open");
-      _dropdown.querySelectorAll(".suggestion-item").forEach((el, i) => {
-        el.addEventListener("mousedown", (e) => { e.preventDefault(); go(_items[i]); });
+    inputEl.addEventListener("input", async () => {
+      const q = inputEl.value.trim();
+      if (!q) { dropdownEl.classList.remove("open"); return; }
+      await ensureLoaded();
+      const result = buildSuggestions(q, mode);
+      items = result.items;
+      dropdownEl.innerHTML = result.html;
+      activeIdx = -1;
+      dropdownEl.classList.add("open");
+      dropdownEl.querySelectorAll(".suggestion-item").forEach((el, i) => {
+        el.addEventListener("mousedown", (e) => { e.preventDefault(); go(items[i]); });
       });
     });
 
-    _input.addEventListener("keydown", (e) => {
-      const all = _dropdown.querySelectorAll(".suggestion-item");
-      if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(_activeIdx + 1, all.length - 1)); }
-      else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(_activeIdx - 1, 0)); }
+    function setActive(idx) {
+      const all = dropdownEl.querySelectorAll(".suggestion-item");
+      all.forEach((el, i) => el.classList.toggle("active", i === idx));
+      activeIdx = idx;
+    }
+
+    inputEl.addEventListener("keydown", (e) => {
+      const all = dropdownEl.querySelectorAll(".suggestion-item");
+      if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(activeIdx + 1, all.length - 1)); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
       else if (e.key === "Enter") {
-        if (_activeIdx >= 0 && _items[_activeIdx]) { e.preventDefault(); go(_items[_activeIdx]); }
-        else if (_items.length) { e.preventDefault(); go(_items[0]); }
-      } else if (e.key === "Escape") { _dropdown.classList.remove("open"); _input.blur(); }
+        if (activeIdx >= 0 && items[activeIdx]) { e.preventDefault(); go(items[activeIdx]); }
+        else if (items.length) { e.preventDefault(); go(items[0]); }
+      } else if (e.key === "Escape") { dropdownEl.classList.remove("open"); inputEl.blur(); }
     });
 
     document.addEventListener("click", (e) => {
-      if (!_input.contains(e.target) && !_dropdown.contains(e.target)) _dropdown.classList.remove("open");
+      if (!inputEl.contains(e.target) && !dropdownEl.contains(e.target)) dropdownEl.classList.remove("open");
     });
   }
 
@@ -123,5 +147,5 @@ const Search = (() => {
     attach(input, dropdown, mode);
   }
 
-  return { load, initHeader, attachHero, attach };
+  return { load: ensureLoaded, initHeader, attachHero, attach };
 })();

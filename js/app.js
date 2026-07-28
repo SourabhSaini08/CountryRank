@@ -82,6 +82,7 @@ function renderHeader(activePage) {
         <a href="${BASE}/" data-page="" ${activePage===""?"class='active'":""}>${home}</a>
         <a href="${BASE}/categories/" data-page="categories" ${activePage==="categories"?"class='active'":""}>${categories}</a>
         <a href="${BASE}/countries/" data-page="countries" ${activePage==="countries"?"class='active'":""}>${countries}</a>
+        <a href="${BASE}/blog.html" data-page="blog" ${activePage==="blog"?"class='active'":""}>World (Blog)</a>
       </nav>
       <div class="header-search" role="search">
         <div class="search-box" id="header-search-box">
@@ -114,6 +115,7 @@ function renderFooter() {
           <a href="${BASE}/">${_t("nav_home")}</a>
           <a href="${BASE}/categories/">${_t("nav_categories")}</a>
           <a href="${BASE}/countries/">${_t("nav_countries")}</a>
+          <a href="${BASE}/blog.html">World (Blog)</a>
         </div>
         <div>
           <h4>${_t("footer_data")}</h4>

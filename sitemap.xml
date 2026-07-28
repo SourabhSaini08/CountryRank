@@ -16,6 +16,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mycountryrank.com/blog.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mycountryrank.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1082,6 +1087,51 @@
   </url>
   <url>
     <loc>https://mycountryrank.com/country.html?id=zimbabwe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=top-20-richest-countries-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=strongest-passports-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=best-healthcare-systems-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=best-education-systems-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=greenest-countries-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=most-technologically-advanced-countries-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=best-governments-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=most-culturally-influential-countries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycountryrank.com/blog-post.html?slug=most-beautiful-countries-to-visit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

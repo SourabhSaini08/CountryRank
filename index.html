@@ -12,6 +12,7 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKVFE9MXC9"></script>
 <script>
+  //hloo 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -129,6 +130,15 @@
         <div class="stat-tile"><span class="stat-num">8</span><div class="stat-label">Languages</div></div>
       </div>
 
+      <!-- Latest Articles from Blog -->
+      <section class="latest-articles-section" aria-label="Latest blog articles">
+        <div class="latest-articles-header">
+          <h2 class="section-title" style="margin:0">Latest from the Blog</h2>
+          <a href="blog.html" class="view-all-link">View All Articles →</a>
+        </div>
+        <div id="latest-articles-grid" class="blog-grid"></div>
+      </section>
+
       <article class="seo-content" aria-label="About CountryRank">
         <h2>The Complete Country Rankings Database for 2025</h2>
         <p>
@@ -177,6 +187,7 @@
   <script src="js/app.js"></script>
   <script src="js/search.js"></script>
   <script src="js/faq.js"></script>
+  <script src="js/blog-data.js"></script>
   <script>
     pageInit("");
     Search.initHeader();
@@ -215,6 +226,13 @@
       faqMount.innerHTML = FAQ.buildHomeFAQ();
       FAQ.initAccordions();
     }
+
+    // Latest Articles section
+    BlogData.loadPosts().then(posts => {
+      const latest = BlogData.sortByDateDesc(posts).slice(0, 3);
+      const grid = document.getElementById("latest-articles-grid");
+      if (grid) grid.innerHTML = latest.map(p => BlogData.cardHTML(p)).join("");
+    }).catch(() => {});
   </script>
 </body>
 </html>

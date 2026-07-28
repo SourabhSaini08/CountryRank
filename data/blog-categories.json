@@ -1,0 +1,10 @@
+[
+  { "id": "economy",     "name": "Economy",     "icon": "💰" },
+  { "id": "education",   "name": "Education",   "icon": "🎓" },
+  { "id": "health",      "name": "Health",      "icon": "🏥" },
+  { "id": "technology",  "name": "Technology",  "icon": "💻" },
+  { "id": "environment", "name": "Environment", "icon": "🌱" },
+  { "id": "governance",  "name": "Governance",  "icon": "⚖️" },
+  { "id": "travel",      "name": "Travel",      "icon": "✈️" },
+  { "id": "culture",     "name": "Culture",     "icon": "🎭" }
+]
