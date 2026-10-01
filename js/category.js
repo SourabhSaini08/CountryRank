@@ -40,7 +40,7 @@
   const countryMap = {};
   countries.forEach(c => { countryMap[c.id] = c; });
 
-  document.title = `${cat.name} ${_t("rankings")} 2025 — CountryRank`;
+  document.title = `${cat.name} ${_t("rankings")} 2026 — CountryRank`;
   document.querySelector('meta[name="description"]')
     ?.setAttribute("content", `${cat.name} country rankings. ${cat.description}`);
 

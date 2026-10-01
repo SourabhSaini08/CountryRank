@@ -48,7 +48,7 @@
     .filter(c => c.continent === country.continent && c.id !== id)
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  document.title = `${country.name} — ${_t("rankings")}, Facts & Data 2025 — CountryRank`;
+  document.title = `${country.name} — ${_t("rankings")}, Facts & Data 2026 — CountryRank`;
   document.querySelector('meta[name="description"]')
     ?.setAttribute("content", `${country.name}: ${_t("capital")} ${country.capital}, ${catRanks.length} global rankings.`);
 

@@ -19,7 +19,7 @@ const BlogData = (() => {
     return [...posts].sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
   }
 
-  /* Format ISO date "2025-05-15" -> "May 15, 2025" */
+  /* Format ISO date "2026-05-15" -> "May 15, 2026" */
   function formatDate(iso) {
     if (!iso) return "";
     const d = new Date(iso + "T00:00:00");
